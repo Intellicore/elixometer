@@ -4,19 +4,23 @@ defmodule Elixometer.Mixfile do
   def project do
     [app: :elixometer,
      version: "1.1.0",
-     elixir: ">= 1.2.0",
+     elixir: ">= 1.0.0",
      description: description,
      source_url: project_url,
      homepage_url: project_url,
      package: package,
      deps: deps,
+     test_coverage: [tool: ExCoveralls],
+     preferred_cli_env: ["coveralls": :test,
+                         "coveralls.detail": :test,
+                         "coveralls.post": :test],
      elixirc_paths: elixirc_paths(Mix.env),
      ]
   end
 
   def application do
      [mod: {Elixometer.App, []},
-      applications: [:lager, :exometer_core],
+      applications: [:lager, :exometer_core, :pobox],
       erl_opts: [parse_transform: "lager_transform"],
       env: default_config(Mix.env)
      ]
@@ -32,12 +36,12 @@ defmodule Elixometer.Mixfile do
 
   defp deps do
     [
-        {:meck, github: "eproxus/meck", tag: "0.8.2", override: true},
+        {:meck, "~> 0.8.3", only: :test},
         {:edown, github: "uwiger/edown", tag: "0.7", override: true},
         {:lager, github: "basho/lager", tag: "2.1.0", override: true},
-        {:netlink, github: "Feuerlabs/netlink", override: true},
-        {:exometer_core, github: "Feuerlabs/exometer_core", tag: "1.4", override: true},
-        {:exometer, github: "Feuerlabs/exometer", tag: "1.2.1", override: true},
+        {:exometer_core, github: "PSPDFKit-labs/exometer_core"},
+        {:excoveralls, github: "parroty/excoveralls", tag: "v0.4.5", override: true, only: :test},
+        {:pobox, github: "ferd/pobox"},
     ]
   end
 
