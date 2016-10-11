@@ -4,18 +4,14 @@ defmodule Elixometer.Mixfile do
   def project do
     [app: :elixometer,
      version: "1.2.1",
-     elixir: ">= 1.0.0",
+     elixir: ">= 1.3.0",
      description: description,
      source_url: project_url,
      homepage_url: project_url,
      package: package,
      deps: deps,
-     test_coverage: [tool: ExCoveralls],
-     preferred_cli_env: ["coveralls": :test,
-                         "coveralls.detail": :test,
-                         "coveralls.post": :test],
      elixirc_paths: elixirc_paths(Mix.env),
-     ]
+   ]
   end
 
   def application do
@@ -39,9 +35,9 @@ defmodule Elixometer.Mixfile do
       #lager 3.2.1 is needed for erl19 because of
       # https://github.com/basho/lager/pull/321
       {:lager, ">= 3.2.1", override: true},
-      {:exometer_core, "~>1.4.0"},
-      {:excoveralls, "~>0.5.4", only: :test},
-      {:pobox, "~>1.0.2"}
+      {:exometer_core, "~> 1.4", override: true},
+      {:pobox, "~> 1.0"},
+      {:exometer, git: "git@bitbucket.org:playrz/exometer.git", branch: "playrz"}
     ]
   end
 
