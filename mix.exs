@@ -5,11 +5,11 @@ defmodule Elixometer.Mixfile do
     [app: :elixometer,
      version: "1.2.1",
      elixir: ">= 1.3.0",
-     description: description,
-     source_url: project_url,
-     homepage_url: project_url,
-     package: package,
-     deps: deps,
+     description: description(),
+     source_url: project_url(),
+     homepage_url: project_url(),
+     package: package(),
+     deps: deps(),
      elixirc_paths: elixirc_paths(Mix.env),
    ]
   end
@@ -58,7 +58,7 @@ to   the configured reporter.
      [files: ["config", "lib", "mix.exs", "mix.lock", "README.md", "LICENSE"],
       maintainers: ["Jon Parise", "Steve Cohen"],
       licenses: ["Apache 2.0"],
-      links: %{"GitHub" => project_url}
+      links: %{"GitHub" => project_url()}
      ]
   end
 
@@ -69,5 +69,4 @@ to   the configured reporter.
   defp elixirc_paths(_) do
     ["lib"]
   end
-
 end
