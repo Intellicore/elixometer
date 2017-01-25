@@ -1,10 +1,10 @@
 %{"bear": {:hex, :bear, "0.8.3", "866002127a97932720a0d475d8582c98ec5fb78db3a18dfe7eaf91594d9024b8", [:rebar3], []},
-  "edown": {:hex, :edown, "0.7.0", "6803599606b10f8e328d6d60c44cd16244cd2429908894c415fce4211c3bfefd", [:rebar, :rebar, :make], []},
+  "edown": {:hex, :edown, "0.7.0", "6803599606b10f8e328d6d60c44cd16244cd2429908894c415fce4211c3bfefd", [:make, :rebar], []},
   "exometer": {:git, "git@bitbucket.org:playrz/exometer.git", "c43e88e7ea4feb797154225d4b584140fc34112a", [branch: "playrz"]},
   "exometer_core": {:hex, :exometer_core, "1.4.0", "a546ccd38be910de6ea75ea95b724b6b2db513c26f02e30919b25eb19651815a", [:rebar3], [{:edown, "0.7.0", [hex: :edown, optional: false]}, {:folsom, "0.8.3", [hex: :folsom, optional: false]}, {:lager, "3.0.2", [hex: :lager, optional: false]}, {:parse_trans, "2.9.0", [hex: :parse_trans, optional: false]}, {:setup, "1.7.0", [hex: :setup, optional: false]}]},
   "folsom": {:hex, :folsom, "0.8.3", "71cff146152fa95e6092e62119f9dc96888660111e7b61853c8fdcf80598a4e0", [:rebar3], [{:bear, "0.8.3", [hex: :bear, optional: false]}]},
   "goldrush": {:hex, :goldrush, "0.1.8", "2024ba375ceea47e27ea70e14d2c483b2d8610101b4e852ef7f89163cdb6e649", [:rebar3], []},
   "lager": {:hex, :lager, "3.2.1", "eef4e18b39e4195d37606d9088ea05bf1b745986cf8ec84f01d332456fe88d17", [:rebar3], [{:goldrush, "0.1.8", [hex: :goldrush, optional: false]}]},
-  "parse_trans": {:hex, :parse_trans, "2.9.0", "3f5f7b402928fb9fd200c891e635de909045d1efac40ce3f924d3892898f85eb", [:rebar, :rebar], [{:edown, "> 0.0.0", [hex: :edown, optional: false]}]},
+  "parse_trans": {:hex, :parse_trans, "2.9.0", "3f5f7b402928fb9fd200c891e635de909045d1efac40ce3f924d3892898f85eb", [:rebar], [{:edown, "> 0.0.0", [hex: :edown, optional: false]}]},
   "pobox": {:hex, :pobox, "1.0.2", "45a5bc91e3cf20f9bc0b94494f00fcdccbc333ab2e0856972b7f0f196fc41613", [:rebar3], []},
   "setup": {:hex, :setup, "1.7.0", "15df8e57c6df9755e22bfb1aef0c640bd97e9889396fdfb2a85a5536a9043674", [:rebar3], []}}
